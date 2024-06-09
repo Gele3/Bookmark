@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <h1 class="text-center py-5 mt-2">Bookmarker</h1>
+        </div>
+
+        <div class="dott mt-3"></div>
+        <div class="d-flex justify-content-center">
+            <h2 class="py-4 m-0"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        </div>
+        <div class="container py-2">
+            <div class="form-group">
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark"></i>
+                        Site Name</label>
+                    <input type="text" oninput="valRegex(this)" id="bookmarkName" class="form-control"
+                        placeholder="Bookmark Name">
+                </div>
+                <div class="mb-3 pt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold"><i class="fa-solid fa-link"></i>
+                        Site URL</label>
+                    <input type="url" oninput="valRegex(this)" class="form-control" id="bookmarkURL"
+                        placeholder="Website URL">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="addBM()" type="submit" class="btn text-white submit px-5 mt-2">Submit</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="dott mt-3"></div>
+
+
+        <table class="table mt-4 text-center bg-light">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableContent"></tbody>
+        </table>
+    </div>
+
+    <div id="valid-regex"
+        class=" position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+        <div class="bg-white w-px p-4 rounded-2 shadow-lg">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="circles d-flex">
+                    <span class="rounded-circle me-2 c1"></span>
+                    <span class="rounded-circle me-2 c2"></span>
+                    <span class="rounded-circle me-2 c3"></span>
+                </div>
+                <button class="btn border-0" onclick="remAlert()" id="closeBtn">
+                    <i class="fa-solid fa-xmark close fs-3"></i>
+                </button>
+            </div>
+            <p class="m-0 pb-2"> Site Name or Url is not valid, Please follow the rules below : </p>
+            <div class="container">
+                <ul class=" list-unstyled m-0">
+                    <li> <i class="fa-regular text-danger fa-circle-right p-2"></i>Site name must contain at least 3
+                        characters</li>
+                    <li> <i class="fa-regular text-danger fa-circle-right p-2"></i>Site URL must be a valid one </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

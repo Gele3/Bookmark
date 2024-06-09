@@ -1,0 +1,109 @@
+body {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    position: relative;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 35%;
+    right: 0;
+    height: 10%;
+    background-color: #fec260;
+    z-index: -1;
+    transition: height 0.3s;
+}
+
+h1:hover::before {
+    height: 22%;
+    bottom: 35%;
+}
+
+::selection {
+    background-color: #fec260;
+}
+
+h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+
+}
+
+.dott {
+    border: none;
+    border-top: 2px dotted black;
+}
+
+h2 {
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+}
+
+.submit {
+    background-color: #D1512D;
+}
+
+.submit:hover {
+    background-color: #C1452D;
+}
+
+.bg-fosdo2 {
+    background-color: #9EB23B;
+}
+
+.bg-fosdo2:hover {
+    background-color: #8a9e23;
+}
+
+.bg-dell {
+    background-color: #EB1D36;
+}
+
+.bg-dell:hover {
+    background-color: #d30820;
+}
+
+
+
+.circles span {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.c1 {
+    background-color: #f15f5d;
+}
+
+.c2 {
+    background-color: #febe2e;
+}
+
+.c3 {
+    background-color: #4db748;
+}
+
+
+p {
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+}
+
+.w-px {
+    width: 477px;
+}
+
+li {
+    font-size: 18px;
+    font-family: "PT Sans Caption" sans-serif;
+}
